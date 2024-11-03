@@ -1,10 +1,14 @@
 def special_rearrangement(nums):
+    arranged_odds = []
+    arranged_evens = []
     for i in nums:
-        if i % 2 != 0:
-            nums.append(i)  # appending i as the last element of the list
-            nums.remove(i)  # removes the first ocuurence of i
+        if i % 2 == 0:
+            arranged_evens.append(i)
+        else:
+            arranged_odds.append(i)
 
-    return print(f"The new arranged list of numbers = {nums}")
+    rearranged_list = arranged_evens + arranged_odds
+    return print(f"The new arranged list of numbers = {rearranged_list}")
 
 
 # Entering list of numbers
