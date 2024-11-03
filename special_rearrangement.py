@@ -1,11 +1,11 @@
 def special_rearrangement(nums):
     arranged_odds = []
     arranged_evens = []
-    for i in nums:
-        if i % 2 == 0:
-            arranged_evens.append(i)
+    for number in nums:
+        if number % 2 == 0:
+            arranged_evens.append(number)
         else:
-            arranged_odds.append(i)
+            arranged_odds.append(number)
 
     rearranged_list = arranged_evens + arranged_odds
     return print(f"The new arranged list of numbers = {rearranged_list}")
